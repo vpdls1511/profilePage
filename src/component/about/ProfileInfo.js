@@ -25,7 +25,7 @@ const ProfileInfo = () => {
                     {
                         skillImg.map((item, index) => {
                             return(
-                                <img key={index} src={item} align={item} />
+                                <img key={index} className={'skill-'+index} src={item} alt={'skills'+index} />
                             )
                         })
                     }

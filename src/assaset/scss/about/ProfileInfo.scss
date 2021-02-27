@@ -8,9 +8,18 @@
     top: calc(50% - 240px);
     padding: 20px;
     height: 400px;
+    span{
+      p{
+        position: relative;
+        opacity: 0;
+      }
+    }
     .nameText{
       font-size: 3em;
       line-height: 50px;
+      p{
+        animation: upContent 0.7s ease forwards 1s;
+      }
       p:nth-child(1){
         font-weight: bold;
       }
@@ -25,6 +34,7 @@
         line-height: 30px;
         font-size: 1.5em;
         font-weight: lighter;
+        animation: upContent 0.7s ease forwards 1.3s;
       }
       p:first-child{
         margin : 30px 0 20px 0;
@@ -38,7 +48,14 @@
 
     .skillImages{
       img{
+        position: relative;
+        opacity: 0;
         width: 90px;
+        &.skill-0{animation: upContent 0.7s ease forwards 1.7s;}
+        &.skill-1{animation: upContent 0.7s ease forwards 1.9s;}
+        &.skill-2{animation: upContent 0.7s ease forwards 2.1s;}
+        &.skill-3{animation: upContent 0.7s ease forwards 2.2s;}
+        &.skill-4{animation: upContent 0.7s ease forwards 2.5s;}
       }
     }
 

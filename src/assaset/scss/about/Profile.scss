@@ -10,6 +10,7 @@
     height: 490px;
     div{
       position: relative;
+      opacity: 0;
       width: $imgSize;
       height: $imgSize;
       border-radius: $imgSize;
@@ -17,16 +18,19 @@
       &.firstCircle {
         background-color: #e7ffcd;
         left: 50px;
+        animation: upContent 0.7s ease forwards 0s;
       }
       &.secondCircle{
         background-color: #ccff66;
-        top: -150px;
+        margin-top: -150px;
+        animation: upContent 0.7s ease forwards 0.3s;
       }
       &.imgBox{
-        margin-top: -530px;
+        margin-top: -400px;
         left: 150px;
         background-image: url("../../image/profile.jpeg");
         background-size: cover;
+        animation: upContent 0.7s ease forwards 0.6s;
       }
     }
   }
@@ -34,6 +38,6 @@
 
 @media screen and (max-width: $mobile-width){
   .profileImgBox{
-    transform: scale(0.5);
+    transform: scale(0.7);
   }
 }

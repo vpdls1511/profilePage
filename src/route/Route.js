@@ -1,6 +1,7 @@
 import Home from "../pages/Home";
 import Test from "../pages/Test";
-import {Redirect, Route} from "react-router-dom";
+import {Redirect} from "react-router-dom";
+import Blog from "../pages/Blog";
 
 const mainAppRouter = [
     {
@@ -20,7 +21,7 @@ const mainAppRouter = [
     {
         path:'/blog',
         name : 'blog',
-        component: Test,
+        component: Blog,
     },
     {
         path:'/contact',
