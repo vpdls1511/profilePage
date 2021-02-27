@@ -1,9 +1,17 @@
 import React from 'react'
+import Profile from "../component/about/Profile";
+import ProfileInfo from "../component/about/ProfileInfo";
 
 const Home = () => {
+
+
+
     return (
         <React.Fragment>
-            <p>TEST</p>
+            <div className="aboutWarp">
+                <Profile/>
+                <ProfileInfo/>
+            </div>
         </React.Fragment>
     )
 }

@@ -1,0 +1,52 @@
+.profileInfo{
+  flex:1;
+  width: 100%;
+  min-width: $flex-min-width;
+
+  .infoTextBox{
+    position: relative;
+    top: calc(50% - 240px);
+    padding: 20px;
+    height: 400px;
+    .nameText{
+      font-size: 3em;
+      line-height: 50px;
+      p:nth-child(1){
+        font-weight: bold;
+      }
+      p:nth-child(2){
+        font-size: 0.7em;
+        font-weight: lighter;
+      }
+    }
+
+    .studyingText{
+      p{
+        line-height: 30px;
+        font-size: 1.5em;
+        font-weight: lighter;
+      }
+      p:first-child{
+        margin : 30px 0 20px 0;
+        font-weight: 400;
+        font-size: 3em;
+      }
+      p:last-child{
+        margin-bottom: 50px;
+      }
+    }
+
+    .skillImages{
+      img{
+        width: 90px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: $mobile-width){
+  .infoTextBox{
+    text-align: center;
+  }
+}

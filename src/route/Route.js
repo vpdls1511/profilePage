@@ -1,29 +1,31 @@
 import Home from "../pages/Home";
 import Test from "../pages/Test";
-import {Route} from "react-router-dom";
-
-function RouteWrapper({ component: Component, layout: Layout, ...rest}) {
-    return (
-        <Route {...rest} render={(props) =>
-            <Layout {...props}>
-                <Component {...props} />
-            </Layout>
-        } />
-    );
-}
+import {Redirect, Route} from "react-router-dom";
 
 const mainAppRouter = [
     {
-        path:'/home',
-        name : 'HOME',
-        component: Home,
-        route:RouteWrapper
+        path:'/',
+        component: () => <Redirect to={'/about'} />,
     },
     {
-        path:'/test',
-        name : 'test',
+        path:'/about',
+        name : 'About',
+        component: Home,
+    },
+    {
+        path:'/portfolio',
+        name : 'Portfolio',
         component: Test,
-        route:RouteWrapper
+    },
+    {
+        path:'/blog',
+        name : 'blog',
+        component: Test,
+    },
+    {
+        path:'/contact',
+        name : 'conatact',
+        component: Test,
     },
 ]
 

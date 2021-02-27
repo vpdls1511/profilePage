@@ -1,20 +1,30 @@
-import {mainAppRouter as menuItem} from '../route/Route'
+import React from 'react';
+import {mainAppRouter} from "../route/Route";
 import {NavLink} from "react-router-dom";
 
-const menuActiveStyle = {
-    color:'aqua',
-    fontweight:'bold'
-}
-
 const TopNav = () => {
+
+    const [isMenuToggle , setIsMenuToggle] = React.useState(false)
+
+    const ChageMenuState = () => {
+        setIsMenuToggle(isMenuToggle===false)
+        console.log(isMenuToggle)
+    }
     return(
-        <div>
-            <ul>
+        <div className='topNavBar'>
+            <header>nGyu</header>
+            <div className='hambugBtn' onClick={ChageMenuState}>
+                <div className='btn-1-line'></div>
+                <div className='btn-2-line'></div>
+                <div className='btn-3-line'></div>
+            </div>
+
+            <ul className={isMenuToggle ? 'openDropMenu' : 'closeDropMenu'}>
                 {
-                    menuItem.map((item, index) => {
+                    mainAppRouter.map((item, index) => {
                         return(
                             <li key={index}>
-                                <NavLink to={item.path} activeStyle={menuActiveStyle}> {item.name} </NavLink>
+                                <NavLink to={item.path}> {item.name} </NavLink>
                             </li>
                         )
                     })

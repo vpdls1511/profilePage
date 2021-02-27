@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
+import {HashRouter, Route, Switch, Redirect} from "react-router-dom";
 
 import MainLayout from "./layout/Main";
 
@@ -8,9 +8,7 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-
         window.localStorage.setItem('userState','Guest');
-
     }
 
     render() {
@@ -20,21 +18,25 @@ class App extends React.Component {
         const Layout = userState==='Guest' ? MainLayout : AdminLayout
 
         return (
-            <BrowserRouter>
-                <Switch>
-                    {
-                        router.map((route , index) => {
-                            return(
-                                <route.route
-                                    path={route.path}
-                                    component={route.component}
-                                    layout={Layout}
-                                />
-                            )
-                        })
-                    }
-                </Switch>
-            </BrowserRouter>
+            <HashRouter>
+                <div className={'rootBackground'}/>
+                <Layout>
+                    <Switch>
+                        {
+                            router.map((route , index) => {
+                                return(
+                                    <Route
+                                        exact
+                                        path={route.path}
+                                        component={route.component}
+                                        layout={Layout}
+                                    />
+                                )
+                            })
+                        }
+                    </Switch>
+                </Layout>
+            </HashRouter>
         )
     }
 }
