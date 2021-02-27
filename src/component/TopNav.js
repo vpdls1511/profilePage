@@ -24,7 +24,10 @@ const TopNav = () => {
                     mainAppRouter.map((item, index) => {
                         return(
                             <li key={index}>
-                                <NavLink to={item.path}> {item.name} </NavLink>
+                                <NavLink
+                                    to={item.path}
+                                    onClick={ChageMenuState}
+                                > {item.name} </NavLink>
                             </li>
                         )
                     })

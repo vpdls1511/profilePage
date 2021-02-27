@@ -1,7 +1,6 @@
 .profile{
   flex:1;
   width: 100%;
-  min-width: $flex-min-width;
   .profileImgBox{
     position: relative;
     top:calc(50% - 245px);
@@ -35,9 +34,17 @@
     }
   }
 }
+@media screen and(min-width: $mobile-width+1){
+  .profileInfo{
+    min-width: 600px;
+  }
+}
 
 @media screen and (max-width: $mobile-width){
+  .profileInfo{
+    min-width: 300px;
+  }
   .profileImgBox{
-    transform: scale(0.7);
+    transform: scale(0.5);
   }
 }

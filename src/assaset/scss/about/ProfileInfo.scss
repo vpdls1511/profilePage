@@ -1,7 +1,7 @@
 .profileInfo{
   flex:1;
   width: 100%;
-  min-width: $flex-min-width;
+
 
   .infoTextBox{
     position: relative;
@@ -58,11 +58,19 @@
         &.skill-4{animation: upContent 0.7s ease forwards 2.5s;}
       }
     }
+  }
+}
 
+@media screen and(min-width: $mobile-width+1){
+  .profileInfo{
+    min-width: 600px;
   }
 }
 
 @media screen and (max-width: $mobile-width){
+  profileInfo{
+    min-width: 300px;
+  }
   .infoTextBox{
     text-align: center;
   }
