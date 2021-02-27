@@ -35,3 +35,13 @@ p{
   padding: 0px;
   margin: 0px;
 }
+
+//Waiting page
+.waiting{
+  text-align: center;
+  p{
+    line-height: $topNav100-Height;
+    font-weight: bold;
+    font-size: 4em;
+  }
+}

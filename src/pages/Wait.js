@@ -1,11 +1,13 @@
 import React from 'react'
 
-const Test = () => {
+const Wait = () => {
     return (
         <React.Fragment>
-            <p>dkafjpklsdjfokpasjdopkfajsopdf</p>
+            <div className={'waiting'}>
+                <p>준비중 입니다.</p>
+            </div>
         </React.Fragment>
     )
 }
 
-export default Test;
+export default Wait;
