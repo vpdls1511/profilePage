@@ -1,0 +1,7 @@
+const setFireStore = () => {
+
+}
+
+export {
+    setFireStore
+}
