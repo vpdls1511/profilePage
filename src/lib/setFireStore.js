@@ -1,6 +1,6 @@
 const setFireStore = () => {
 
-    //test
+    //test2
 }
 
 export {
