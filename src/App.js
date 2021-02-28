@@ -26,6 +26,7 @@ class App extends React.Component {
                             router.map((route , index) => {
                                 return(
                                     <Route
+                                        key={index}
                                         exact
                                         path={route.path}
                                         component={route.component}
