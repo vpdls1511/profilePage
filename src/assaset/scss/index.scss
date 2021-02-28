@@ -7,10 +7,14 @@
 //Layout
 @import "./TopMenu";
 
-//content
+//component
 @import "about/About";
 @import "profile/Card";
+
+//pages
 @import "Blog";
+@import "profile/main";
+
 //icons
 @import "Icons";
 

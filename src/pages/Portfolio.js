@@ -1,6 +1,4 @@
-import React , {useEffect, useState, useRef} from 'react'
-import {getTestData} from "../lib/getFirestoreData";
-import Card from "../component/portfolio/Card";
+import React from 'react'
 import TeamProject from "../component/portfolio/TeamProject";
 
 let count = 0;
@@ -9,7 +7,10 @@ const Portfolio = () => {
 
     return(
         <div className='projectList'>
-            <p> Team Project </p>
+            <span className='projectTitleTextBox'>
+                <p> 가장 최근 프로젝트들 </p>
+                <hr/>
+            </span>
             <TeamProject/>
         </div>
     )
