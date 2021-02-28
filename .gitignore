@@ -9,8 +9,7 @@
 
 
 #firebase
-.firebaserc
-.firebase.json
+.firebase*
 .firestore.indexes.json
 .firestore.rules
 
