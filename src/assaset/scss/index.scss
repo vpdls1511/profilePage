@@ -1,0 +1,47 @@
+//Variable
+@import "./variable";
+
+//Font
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+//Layout
+@import "./TopMenu";
+
+//content
+@import "about/About";
+@import "Blog";
+
+html,body{
+  font-family: 'Noto Sans KR', sans-serif;
+  padding: 0;
+  margin:0;
+  width: 100%;
+  height: $topNav100-Height;
+  &::-webkit-scrollbar{ width: 0px; }
+}
+#root{
+  width: 100%;
+  height: 100%;
+}
+.rootBackground{
+  position: fixed;
+  z-index: -99999;
+  top: $topNavHeight;
+  width: 100%;
+  height: $topNav100-Height;
+  background:linear-gradient(to top,#E9FFE9 , #ffffff , #ffffff, #ffffff, #ffffff);
+}
+p{
+  padding: 0px;
+  margin: 0px;
+}
+
+//Waiting page
+.waiting{
+  text-align: center;
+  p{
+    line-height: $topNav100-Height;
+    font-weight: bold;
+    font-size: 4em;
+  }
+}
