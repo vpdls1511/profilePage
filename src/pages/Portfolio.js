@@ -7,10 +7,10 @@ const Portfolio = () => {
 
     return(
         <div className='projectList'>
-            <span className='projectTitleTextBox'>
-                <p> 가장 최근 프로젝트들 </p>
-                <hr/>
-            </span>
+            <div className='projectTitleTextBox'>
+                <p>가장 최근 프로젝트들</p>
+                <p>Most recent projects</p>
+            </div>
             <TeamProject/>
         </div>
     )

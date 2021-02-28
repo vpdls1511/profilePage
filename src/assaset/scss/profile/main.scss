@@ -1,0 +1,15 @@
+.projectTitleTextBox{
+  width: 80vw;
+  margin: 30px auto 0;
+  text-align: center;
+  p:not(:last-child){
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #353535;
+  }
+  p:last-child{
+    font-weight: lighter;
+    font-size: 1.2em;
+    letter-spacing: 3px;
+  }
+}
