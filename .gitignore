@@ -1,12 +1,18 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+/.idea/
 /node_modules
 /.pnp
 .pnp.js
-./src/lib
-.firebase*
+/src/lib
+
+
+#firebase
+.firebaserc
 .firebase.json
+.firestore.indexes.json
+.firestore.rules
 
 # testing
 /coverage
