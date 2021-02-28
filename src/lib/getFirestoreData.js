@@ -6,11 +6,12 @@ const getTestData = async () => {
 
     getData.forEach(docs => {
         const doc = docs.data();
-        getDataRow.push([{
+        getDataRow.push({
             id:docs.id,
             title : doc.title,
             desc : doc.desc,
-        }])
+            images : doc.images
+        })
     })
     return getDataRow;
 }

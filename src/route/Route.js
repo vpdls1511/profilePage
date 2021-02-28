@@ -2,6 +2,7 @@ import Home from "../pages/Home";
 import Wait from "../pages/Wait";
 import {Redirect} from "react-router-dom";
 import Blog from "../pages/Blog";
+import Portfolio from "../pages/Portfolio";
 
 const mainAppRouter = [
     {
@@ -16,7 +17,7 @@ const mainAppRouter = [
     {
         path:'/portfolio',
         name : 'Portfolio',
-        component: Wait,
+        component: Portfolio,
     },
     {
         path:'/blog',
