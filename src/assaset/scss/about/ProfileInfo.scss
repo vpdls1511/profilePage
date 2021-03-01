@@ -5,7 +5,8 @@
 
   .infoTextBox{
     position: relative;
-    top: calc(50% - 240px);
+    top: 50%;
+    transform: translateY(-50%);
     padding: 20px;
     height: 400px;
     span{
@@ -24,8 +25,10 @@
         font-weight: bold;
       }
       p:nth-child(2){
-        font-size: 0.7em;
+        color: #888888;
+        font-size: 0.6em;
         font-weight: lighter;
+        margin-bottom: 50px;
       }
     }
 
@@ -42,7 +45,7 @@
         font-size: 3em;
       }
       p:last-child{
-        margin-bottom: 50px;
+        margin-bottom: 70px;
       }
     }
 

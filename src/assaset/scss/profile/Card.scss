@@ -1,89 +1,129 @@
-.projectList{
-  >ul.teamProject{
-    height: 350px;
-    padding: 0px;
-    margin: 0px;
-    list-style: none;
-    width: 100%;
-    white-space: nowrap;
-    overflow-x: hidden;
-    &::-webkit-scrollbar{width: 0px;}
+.mainProjectItem{
+  position: relative;
+  opacity: 0;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  animation: upContent 1s ease forwards 1.5s;
+  .cardWarp{
+    margin: 40px;
+    height: 450px;
+    div.mainImg{
+      float: left;
+      overflow:hidden;
+      box-shadow: 5px 5px 7px #eee;
+      border-radius: 30px;
+      .slidehelper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+        .mainImgList{
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          border-radius: 30px;
+          float: left;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .imgListBox{
+      .mainImgList{
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+        overflow:hidden;
+        border-radius: 20px;
+        &:not(:last-child){
+          margin-bottom: 10px;
+        }
+      }
+    }
+
   }
 }
-.cardWarp{
-  position: relative;
-  top: calc(50% - 150px);
-  width: 80vw;
-  height: 300px;
-  border-radius: 20px;
-  display: inline-block;
-  overflow: hidden;
-  box-shadow: 0px 5px 10px #eee;
-  margin:0 10vw 0 10vw;
-  transition: 0.25s;
 
-  .mainImg{
-    width: 100%;
-    height: 70%;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .cardContent{
-    width: 100%;
-    height: 30%;
-    p{
-      margin-left: 20px;
-      &:nth-child(1){
-        margin: 10px 20px 0 20px;
+@media screen and (min-width: $mobile-width+600px) {
+  .cardWarp{
+    position: relative;
+    width : $mobile-width+600px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding:  30px 100px;
+    .mainImg{
+      width: 450px;
+      height: 450px;
+    }
+    .imgListBox{
+      position: relative;
+      width: 100px;
+      height: 430px;
+      top: calc(50% - 215px);
+      left: 40px;
+      float: left;
+      transform: scale(0.7);
+      .mainImgList{
       }
-      &:nth-child(2){
-        font-weight: 300;
+    }
+    .cardContent{
+      position: relative;
+      float: right;
+      overflow:auto;
+      top: 50%;
+      width: calc(100% - 700px);
+      min-width: 300px;
+      transform: translateY(-50%);
+      margin-right: 50px;
+      p:first-child{
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      p:nth-child(2){
+        font-weight: lighter;
+        font-size: 1.1em;
       }
     }
   }
 }
 
-.slideBtn{
-  position: relative;
-  width: 12vw;
-  height: 250px;
-  margin-top: -250px;
-  background-color: transparent;
-  cursor:pointer;
-}
-.prevBtn {
-  float: left;
-  transform: rotate(-180deg);
-}
-.nextBtn{
-  float: right;
-}
-
-@keyframes slideHover {
-  0% {
-    margin-left: 0;
-  }
-  50%{
-    margin-left: 5px;
-  }
-  100% {
-    margin-left: 0;
-  }
-}
-@media screen and (min-width: $mobile-width+1){
-  .slideBtn{
-    &:hover{
-      .arrow{
-        animation: slideHover 1s ease infinite 0s;
+@media screen and (max-width: $mobile-width+600px){
+  .cardWarp{
+    .mainImg{
+      position: relative;
+      width: 90vw;
+      height: 90vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .imgListBox{
+      position: relative;
+      width: 460px;
+      left: calc(50% - 230px);
+      transform: scale(0.7);
+      float: left;
+      .mainImgList{
+        float: left;
+        &:not(:last-child){
+          margin-right: 20px;
+        }
       }
     }
-  }
-}
-@media screen and (max-width: $mobile-width){
-  .slideBtn{
-    .arrow{
-      transform: scale(0.5);
+    .cardContent{
+      float: left;
+      padding: 20px;
+      p:first-child{
+        font-weight: bold;
+        font-size: 1.3em;
+        margin-bottom: 20px;
+      }
+      p:last-child{
+        font-weight: lighter;
+        font-size: 0.9em;
+      }
     }
   }
 }

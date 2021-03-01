@@ -1,0 +1,18 @@
+.footerWarp{
+  position: fixed;
+  height: 20px;
+  width: 100vw;
+  bottom: 10px;
+  text-align: center;
+  opacity: 0.3;
+  font-size: 0.5em;
+  p{
+    color: #565656;
+    a{
+      color: #565656;
+    }
+    b{
+      color: #ff4958;
+    }
+  }
+}
