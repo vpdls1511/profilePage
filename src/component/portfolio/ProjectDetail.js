@@ -34,8 +34,11 @@ const ProjectDetail = (props) => {
         <React.Fragment>
             <div className='projectDetailWarp'>
                 <div className='projectDetailContent'>
-                    <button className={'fixedData'} onClick={() => props.OpenDetail('')} >{scrolled}</button>
                     <div className='dialogTitle'>
+                        <span className='exitButton' onClick={() => props.OpenDetail('')} >
+                        <div className='exitLine-1'></div>
+                        <div className='exitLine-2'></div>
+                    </span>
                         <div className='dialogTitleImg' style={{ backgroundImage:'url('+content.image+')' }}/>
                         <progress className='horizontalScroll' value={scrolled} max='100' ></progress>
                     </div>
