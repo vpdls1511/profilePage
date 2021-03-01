@@ -1,0 +1,80 @@
+.projectDetailWarp{
+  position: fixed;
+  opacity: 0;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  animation: showDetailsBackground .25s ease forwards 0s;
+  .fixedData{
+    position: fixed;
+  }
+  .projectDetailContent{
+    position: relative;
+    opacity: 0;
+    animation: showDetailsContent 1s ease forwards .25s;
+    width: 95vw;
+    height: 95vh;
+    left: calc(50% - 47.5vw);
+    top: calc( 50% - 47.5vh);
+    border-radius: 20px;
+    background-color: white;
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+    display: none;
+    }
+    .dialogTitle{
+      .dialogTitleImg{
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+      }
+      .horizontalScroll{
+        position: absolute;
+        margin-top: -5px;
+        width: 100%;
+        height: 5px;
+        border: 0;
+        &[value]::-webkit-progress-bar{
+          background-color: transparent;
+        }
+        &[value]::-webkit-progress-value{
+          background-color: #ccff66;
+        }
+      }
+    }
+
+  }
+
+  .dialogContent{
+    width: 100%;
+    height: calc(100% - 300px);
+    overflow-y: scroll;
+    &::-webkit-scrollbar{
+      display: none;
+    }
+  }
+}
+
+@keyframes showDetailsBackground {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes showDetailsContent {
+  0%{
+    margin-top: 50px;
+    opacity: 0;
+  }
+  100%{
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
