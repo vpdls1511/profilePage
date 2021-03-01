@@ -1,6 +1,6 @@
 import {db} from "./setting/setFireStore";
 
-const getTestData = async () => {
+const getProjectData = async () => {
     let getDataRow = []
     const getData = await db.collection('projects').get();
 
@@ -33,6 +33,6 @@ const getRecentData = async () => {
 }
 
 export {
-    getTestData,
+    getProjectData,
     getRecentData
 }

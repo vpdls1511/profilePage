@@ -1,0 +1,29 @@
+.projectList{
+  .projectTitleTextBox{
+    width: 80vw;
+    margin: 30px auto 0;
+    text-align: center;
+    clear:both;
+    p:not(:last-child){
+      position: relative;
+      opacity: 0;
+      animation: upContent 1s ease forwards 0s;
+      font-weight: bold;
+      font-size: 1.5em;
+      color: #353535;
+    }
+    p:last-child{
+      position: relative;
+      opacity: 0;
+      animation: upContent 1s ease forwards .3s;
+      font-weight: lighter;
+      font-size: 1.2em;
+      letter-spacing: 3px;
+    }
+  }
+  .sub{
+    padding: 30px;
+    p:not(:last-child){animation: upContent 1s ease forwards 2s;}
+    p:last-child{animation: upContent 1s ease forwards 2.3s;}
+  }
+}
