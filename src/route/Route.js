@@ -1,8 +1,8 @@
 import Home from "../pages/Home";
-import Wait from "../pages/Wait";
 import {Redirect} from "react-router-dom";
 import Blog from "../pages/Blog";
 import Portfolio from "../pages/Portfolio";
+import Contact from "../pages/Contact";
 
 const mainAppRouter = [
     {
@@ -27,7 +27,7 @@ const mainAppRouter = [
     {
         path:'/contact',
         name : 'conatact',
-        component: Wait,
+        component: Contact,
     },
 ]
 

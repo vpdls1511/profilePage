@@ -4,8 +4,8 @@ const ProfileInfo = () => {
 
     const skillImg = [
         '/images/resource/html.png',
-        '/images/resource/sass.png',
         '/images/resource/javascript.png',
+        '/images/resource/sass.png',
         '/images/resource/react.png',
         '/images/resource/node.png']
 
