@@ -75,8 +75,6 @@
     animation: upContent 1s ease forwards 1s;
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
-    min-width: 500px;
     margin: 0px auto;
     div{
       flex:1;
@@ -116,6 +114,25 @@
         padding: 0 0px 0 40px;
       }
     }
+
+    .contactImgBox{
+      width: 80%;
+      min-width: 500px;
+      div{
+        flex:1;
+        min-width: 300px;
+        height: 400px;
+        padding: 10px;
+        text-align: center;
+        border-radius: 30px;
+        overflow: hidden;
+        >div{
+          position: relative;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+    }
   }
 }
 
@@ -137,5 +154,8 @@
       top: 10px;
       transform: translateX(-50%);
     }
+  }
+  .contactImgBox{
+
   }
 }
