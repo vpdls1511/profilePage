@@ -1,7 +1,11 @@
 .contactWarp{
   .profileBox{
+    position: relative;
     margin: 0 auto;
     clear: both;
+    opacity: 0;
+    animation: upContent 1s ease forwards 0s;
+
    div.titleText{
       margin-top: 5px;
       float: left;
@@ -41,6 +45,8 @@
     width: 350px;
     margin: 0 auto;
     padding: 50px 0;
+    opacity: 0;
+    animation: upContent 1s ease forwards 0.5s;
     button{
       width: 170px;
       height: 50px;
@@ -64,6 +70,9 @@
   }
 
   .contactImgBox{
+    position: relative;
+    opacity: 0;
+    animation: upContent 1s ease forwards 1s;
     display: flex;
     flex-wrap: wrap;
     width: 80%;
